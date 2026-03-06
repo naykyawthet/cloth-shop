@@ -1,8 +1,39 @@
-# React + Vite
+# Cloth Shop (Frontend + Backend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project now includes:
 
-Currently, two official plugins are available:
+- A Vite + React frontend.
+- A lightweight Node backend API (no external backend dependencies required).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Scripts
+
+- `npm run dev` — starts the frontend only.
+- `npm run backend` — starts the backend API on `http://localhost:4000`.
+- `npm run dev:full` — starts backend and frontend together.
+- `npm run build` — builds the frontend for production.
+- `npm run lint` — runs ESLint.
+
+## Backend API
+
+Base URL: `http://localhost:4000`
+
+### `GET /api/health`
+Health check endpoint.
+
+### `GET /api/products`
+Returns product data used by the frontend product grid.
+
+### `POST /api/subscribe`
+Subscribes an email address.
+
+Request body:
+
+```json
+{ "email": "hello@example.com" }
+```
+
+Success response:
+
+```json
+{ "message": "Thanks for subscribing!", "alreadySubscribed": false }
+```
